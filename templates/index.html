@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWASP Risk Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">OWASP Risk Calculator</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/vulnerabilities">View Vulnerabilities</a></li>
+                <li class="nav-item"><a class="nav-link" href="/export">Export to Excel</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">OWASP Risk Calculator</h1>
+        <form id="risk-form" action="/calculate-risk" method="POST" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="vulnerability">Vulnerability Name:</label>
+                <input type="text" class="form-control" id="vulnerability" name="vulnerability" required>
+                <div class="invalid-feedback">Please provide a name.</div>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="description">Description:</label>
+                <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                <div class="invalid-feedback">Please provide a description.</div>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="likelihood">Likelihood (1-10):</label>
+                <input type="number" class="form-control" id="likelihood" name="likelihood" min="1" max="10" required>
+                <div class="invalid-feedback">Please provide a likelihood between 1 and 10.</div>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="impact">Impact (1-10):</label>
+                <input type="number" class="form-control" id="impact" name="impact" min="1" max="10" required>
+                <div class="invalid-feedback">Please provide an impact between 1 and 10.</div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary mt-4 w-48">Calculate Risk</button>
+                <button type="button" id="clear-button" class="btn btn-secondary mt-4 w-48">Clear</button>
+            </div>
+        </form>
+
+        <!-- The result section where the risk output will be shown -->
+        <div id="result" class="alert alert-success mt-3" style="display: none;">
+            <p><strong>Vulnerability:</strong> <span id="risk-vulnerability"></span></p>
+            <p><strong>Risk Level:</strong> <span id="risk-level"></span></p>
+            <p><strong>Mitigation:</strong> <span id="risk-mitigation"></span></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>

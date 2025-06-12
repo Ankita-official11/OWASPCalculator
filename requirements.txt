@@ -1,0 +1,160 @@
+***COMMANDS TO RUN THE CODE***
+
+python -m venv venv
+.\venv\Scripts\activate
+pip install flask-sqlalchemy
+pip install Flask
+pip install werkzeug
+pip install Flask SQLAlchemy pandas openpyxl
+pip install --upgrade Flask Flask-SQLAlchemy
+
+python app.py
+
+Here are 10 examples of vulnerabilities with descriptions, likelihood, and impact ratings:
+
+***A]LOW***
+
+1)
+Vulnarability Name: Insufficient Logging and Monitoring
+Description: Lack of proper logging and monitoring allows attacks to go unnoticed.
+Likelihood: 4
+Impact: 6
+
+2)
+Vulnarability Name: Security Misconfiguration
+Description: Misconfigurations of servers, applications, or cloud environments.
+Likelihood: 5
+Impact: 6
+
+3)
+Vulnarability Name: Cross-Site Request Forgery (CSRF)
+Description: A user is tricked into performing unwanted actions on a web application without their consent.
+Likelihood: 4
+Impact: 5
+
+4)
+Vulnarability Name: Directory Traversal
+Description: Allows attackers to access restricted files or directories.
+Likelihood: 3
+Impact: 4
+
+5)
+Vulnarability Name: Weak Password Recovery Mechanism
+Description: Poorly implemented password recovery allows attackers to reset user passwords with minimal effort.
+Likelihood: 4
+Impact: 5
+
+***B]MEDIUM***
+
+1)
+Vulnarability Name: Cross-Site Scripting (XSS)
+Description: Malicious scripts injected into web pages viewed by others, leading to data theft.
+Likelihood: 6
+Impact: 7
+
+2)
+Vulnarability Name: Insecure Direct Object References (IDOR)
+Description: Attackers manipulate parameters to gain unauthorized access to users' data.
+Likelihood: 6
+Impact: 7
+
+3)
+Vulnarability Name: Broken Authentication
+Description: Insecure authentication mechanisms allow attackers to bypass login procedures.
+Likelihood: 7
+Impact: 6
+
+4)
+Vulnarability Name: Using Components with Known Vulnerabilities
+Description: Vulnerabilities in third-party libraries allow attackers to compromise the system.
+Likelihood: 6
+Impact: 7
+
+5)
+Vulnarability Name: Cross-Site Request Forgery (CSRF)
+Description: Allows an attacker to perform actions on behalf of an authenticated user.
+Likelihood: 6
+Impact: 6
+
+***C]HIGH***
+
+1)
+Vulnarability Name: SQL Injection
+Description: An attacker executes arbitrary SQL code, allowing unauthorized access to data.
+Likelihood: 8
+Impact: 9
+
+2)
+Vulnarability Name: Sensitive Data Exposure
+Description: Sensitive information (e.g., passwords, credit card numbers) is exposed due to weak encryption.
+Likelihood: 7
+Impact: 10
+
+3)
+Vulnarability Name: Broken Authentication
+Description: Attackers gain unauthorized access to user accounts due to insecure authentication.
+Likelihood: 8
+Impact: 9
+
+4)
+Vulnarability Name: Command Injection
+Description: An attacker can inject system-level commands through input fields, potentially compromising the system.
+Likelihood: 8
+Impact: 9
+
+5)
+Vulnarability Name: Cross-Site Scripting (XSS) - Stored
+Description: Malicious scripts are permanently stored and executed when other users access the compromised content.
+Likelihood: 7
+Impact: 8
+
+
+1. **SQL Injection**
+   - **Description**: An attacker manipulates a web application's database queries by injecting malicious SQL code, allowing unauthorized access to data.
+   - **Likelihood**: 8
+   - **Impact**: 9
+
+2. **Cross-Site Scripting (XSS)**
+   - **Description**: Attackers inject malicious scripts into web pages viewed by users, enabling them to steal user credentials or perform unauthorized actions.
+   - **Likelihood**: 7
+   - **Impact**: 8
+
+3. **Cross-Site Request Forgery (CSRF)**
+   - **Description**: A user is tricked into performing unwanted actions on a web application where they are authenticated, without their consent.
+   - **Likelihood**: 6
+   - **Impact**: 7
+
+4. **Insecure Deserialization**
+   - **Description**: Deserialization of untrusted data can lead to remote code execution, denial of service, or security bypasses.
+   - **Likelihood**: 5
+   - **Impact**: 9
+
+5. **Broken Authentication**
+   - **Description**: Weaknesses in authentication mechanisms allow attackers to compromise user credentials or session tokens, leading to unauthorized access.
+   - **Likelihood**: 7
+   - **Impact**: 9
+
+6. **Sensitive Data Exposure**
+   - **Description**: Applications fail to protect sensitive information (e.g., passwords, credit card details) by using weak or no encryption.
+   - **Likelihood**: 6
+   - **Impact**: 8
+
+7. **Security Misconfiguration**
+   - **Description**: Default or incorrect security settings allow attackers to exploit known vulnerabilities and gain unauthorized access.
+   - **Likelihood**: 7
+   - **Impact**: 7
+
+8. **Using Components with Known Vulnerabilities**
+   - **Description**: The use of outdated or vulnerable libraries, frameworks, or software components exposes the application to exploitation.
+   - **Likelihood**: 8
+   - **Impact**: 6
+
+9. **Buffer Overflow**
+   - **Description**: Attackers exploit a buffer overflow to overwrite memory and execute arbitrary code or crash the system.
+   - **Likelihood**: 5
+   - **Impact**: 9
+
+10. **Insufficient Logging & Monitoring**
+    - **Description**: Failure to implement adequate logging and monitoring can result in undetected security breaches and delayed response to incidents.
+    - **Likelihood**: 4
+    - **Impact**: 7
